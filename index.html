@@ -31,21 +31,21 @@
     <div class="available"><span class="dot"></span>Открыт к заказам</div>
     <h1>Azbura<br><span class="grad">Python и JavaScript разработчик</span></h1>
     <p class="tagline">Автоматизация, парсеры, API и небольшие веб-приложения — с проверкой запуском и тестами.</p>
-    <p class="about">Пишу код для задач, где нужен понятный результат: собрать данные, автоматизировать рутину, связать сервисы через API, сделать бота или небольшой дашборд. Работаю с Python, JavaScript, SQL и PowerShell. Каждое решение запускаю на реальных примерах и отдаю вместе с инструкцией и отчётом о проверке.</p>
+    <p class="about">Пишу код для задач, где нужен понятный результат: собрать данные, автоматизировать рутину, связать сервисы через API, сделать бота или небольшой дашборд. Отдельное направление — интеграции с CRM: заявки с сайта, чистка контактов, защита от дублей и отчёт по каждому запуску. Работаю с Python, JavaScript, SQL и PowerShell. Каждое решение запускаю на реальных примерах и отдаю вместе с инструкцией и отчётом о проверке.</p>
     <div class="hero-actions">
       <a class="btn primary" href="#contact">Обсудить задачу</a>
       <a class="btn" href="#projects">Смотреть проекты</a>
     </div>
-    <div class="skills"><span class="chip">Python</span><span class="chip">JavaScript</span><span class="chip">TypeScript</span><span class="chip">SQL</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">FastAPI</span><span class="chip">REST API</span><span class="chip">SQLite</span><span class="chip">PostgreSQL</span><span class="chip">Node.js</span><span class="chip">PowerShell</span><span class="chip">Bash</span><span class="chip">Git</span><span class="chip">Docker</span><span class="chip">Linux</span><span class="chip">парсинг</span><span class="chip">автоматизация</span><span class="chip">телеграм-боты</span><span class="chip">тесты</span></div>
+    <div class="skills"><span class="chip">Python</span><span class="chip">JavaScript</span><span class="chip">TypeScript</span><span class="chip">SQL</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">FastAPI</span><span class="chip">REST API</span><span class="chip">SQLite</span><span class="chip">PostgreSQL</span><span class="chip">Node.js</span><span class="chip">PowerShell</span><span class="chip">Bash</span><span class="chip">Git</span><span class="chip">Docker</span><span class="chip">Linux</span><span class="chip">парсинг</span><span class="chip">автоматизация</span><span class="chip">телеграм-боты</span><span class="chip">тесты</span><span class="chip">интеграции CRM</span><span class="chip">CSV</span></div>
     <div class="location">Удалённо · UTC+3</div>
-    <div class="stats"><div class="stat"><b>3</b><span>проекта в портфолио</span></div><div class="stat"><b>31</b><span>автотест</span></div><div class="stat"><b>7</b><span>языков в работе</span></div></div>
+    <div class="stats"><div class="stat"><b>4</b><span>проекта в портфолио</span></div><div class="stat"><b>46</b><span>автотестов</span></div><div class="stat"><b>7</b><span>языков в работе</span></div></div>
   </section>
 
   <section id="projects" class="section">
     <div class="section-head">
       <span class="kicker">Портфолио</span>
       <h2>Проекты, которые можно запустить</h2>
-      <p>Три законченных работы: код, тесты и реальный вывод. Каждую можно открыть и проверить.</p>
+      <p>Четыре законченных работы: код, тесты и реальный вывод. Каждую можно открыть и проверить.</p>
     </div>
     <div class="projects">
             <article class="project">
@@ -62,6 +62,23 @@
                   <ul><li>7 эндпоинтов: задачи, фильтры, статистика, health-check</li><li>Коды 201/204/400/404/422 и понятные ошибки</li><li>Потокобезопасная запись в SQLite</li><li>9 тестов через TestClient на временной базе</li></ul>
                 </div>
                 <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">SQLite</span><span class="tag">Pydantic</span><span class="tag">Pytest</span></div>
+                <div class="project-links"><span class="mini muted">Код и тесты — в архиве проекта</span></div>
+              </div>
+            </article>
+            <article class="project">
+              <a class="shot" href="assets/crm-leads.png" target="_blank" rel="noopener"><img src="assets/crm-leads.png" alt="CRM Leads — интеграция заявок с сайта и CRM — Скриншот проекта" loading="lazy"></a>
+              <div class="project-body">
+                <div class="project-top">
+                  <span class="year">2026</span>
+                  <span class="tests">15 тестов</span>
+                </div>
+                <h3>CRM Leads — интеграция заявок с сайта и CRM</h3>
+                <p class="summary">CLI-интеграция: читает заявки из CSV, приводит телефоны и email к одному виду, склеивает дубли и отправляет в CRM по REST API идемпотентно. Повторы при 429/5xx, JSON-отчёт и офлайн-режим --check без токенов.</p>
+                <div class="details">
+                  <h4>Что внутри</h4>
+                  <ul><li>Чистка контактов: 8 (912) 345-67-89 → +79123456789</li><li>Склейка дублей по email, телефону и внешнему ID</li><li>Идемпотентный upsert: повторный запуск обновляет запись</li><li>Повторы только на 429/5xx, офлайн-режим --check</li><li>15 тестов, ключ читается только из CRM_API_KEY</li></ul>
+                </div>
+                <div class="tags"><span class="tag">Python</span><span class="tag">REST API</span><span class="tag">CSV</span><span class="tag">urllib</span><span class="tag">unittest</span><span class="tag">Idempotency-Key</span></div>
                 <div class="project-links"><span class="mini muted">Код и тесты — в архиве проекта</span></div>
               </div>
             </article>
@@ -113,8 +130,8 @@
           <p>Разовая задача: обработать файлы, собрать отчёт, убрать ручную рутину.</p>
         </div>
         <div class="service">
-          <div class="service-head"><h3>Парсер и интеграция API</h3><span class="price">от 5 000 ₽</span></div>
-          <p>Сбор данных с сайта или обмен между сервисами, выгрузка в CSV/JSON/таблицу.</p>
+          <div class="service-head"><h3>Парсер, API и CRM</h3><span class="price">от 5 000 ₽</span></div>
+          <p>Сбор данных, обмен между сервисами и заявки в CRM: чистка контактов, защита от дублей, отчёт.</p>
         </div>
         <div class="service">
           <div class="service-head"><h3>Telegram-бот</h3><span class="price">от 7 000 ₽</span></div>
@@ -159,7 +176,7 @@
     <span class="kicker">Контакты</span>
     <h2>Есть задача?</h2>
     <p>Напишите, что нужно сделать и какой результат считается готовым. Отвечу с оценкой и сроком.</p>
-    <div class="contact-actions"><a class="btn primary" href="https://t.me/AzburaItsMe" target="_blank" rel="noopener">Написать в Telegram</a><a class="btn" href="mailto:korkmasov.98@mail.ru">Написать на email</a></div>
+    <div class="contact-actions"><a class="btn primary" href="https://t.me/AzburaItsMe" target="_blank" rel="noopener">Написать в Telegram</a><a class="btn" href="mailto:korkmasov.98@mail.ru">Написать на email</a><a class="btn" href="https://github.com/Azbura" target="_blank" rel="noopener">GitHub</a></div>
   </section>
 </main>
 

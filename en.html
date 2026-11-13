@@ -31,21 +31,21 @@
     <div class="available"><span class="dot"></span>Available for work</div>
     <h1>Azbura<br><span class="grad">Python &amp; JavaScript Developer</span></h1>
     <p class="tagline">Automation, parsers, APIs and small web apps — tested and verified before delivery.</p>
-    <p class="about">I write code for tasks with a clear, testable result: collecting data, automating routine work, connecting services via APIs, building bots or small dashboards. I work with Python, JavaScript, SQL and PowerShell. Every solution is run on real examples and delivered with run instructions and a test report.</p>
+    <p class="about">I write code for tasks with a clear, testable result: collecting data, automating routine work, connecting services via APIs, building bots or small dashboards. A separate focus is CRM integration: website leads, contact cleanup, duplicate protection and a report for every run. I work with Python, JavaScript, SQL and PowerShell. Every solution is run on real examples and delivered with run instructions and a test report.</p>
     <div class="hero-actions">
       <a class="btn primary" href="#contact">Discuss a task</a>
       <a class="btn" href="#projects">See projects</a>
     </div>
-    <div class="skills"><span class="chip">Python</span><span class="chip">JavaScript</span><span class="chip">TypeScript</span><span class="chip">SQL</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">FastAPI</span><span class="chip">REST API</span><span class="chip">SQLite</span><span class="chip">PostgreSQL</span><span class="chip">Node.js</span><span class="chip">PowerShell</span><span class="chip">Bash</span><span class="chip">Git</span><span class="chip">Docker</span><span class="chip">Linux</span><span class="chip">парсинг</span><span class="chip">автоматизация</span><span class="chip">телеграм-боты</span><span class="chip">тесты</span></div>
+    <div class="skills"><span class="chip">Python</span><span class="chip">JavaScript</span><span class="chip">TypeScript</span><span class="chip">SQL</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">FastAPI</span><span class="chip">REST API</span><span class="chip">SQLite</span><span class="chip">PostgreSQL</span><span class="chip">Node.js</span><span class="chip">PowerShell</span><span class="chip">Bash</span><span class="chip">Git</span><span class="chip">Docker</span><span class="chip">Linux</span><span class="chip">парсинг</span><span class="chip">автоматизация</span><span class="chip">телеграм-боты</span><span class="chip">тесты</span><span class="chip">интеграции CRM</span><span class="chip">CSV</span></div>
     <div class="location">Remote · UTC+3</div>
-    <div class="stats"><div class="stat"><b>3</b><span>portfolio projects</span></div><div class="stat"><b>31</b><span>automated tests</span></div><div class="stat"><b>7</b><span>languages in use</span></div></div>
+    <div class="stats"><div class="stat"><b>4</b><span>portfolio projects</span></div><div class="stat"><b>46</b><span>automated tests</span></div><div class="stat"><b>7</b><span>languages in use</span></div></div>
   </section>
 
   <section id="projects" class="section">
     <div class="section-head">
       <span class="kicker">Portfolio</span>
       <h2>Projects you can actually run</h2>
-      <p>Three finished works: code, tests and real output. Each one can be opened and checked.</p>
+      <p>Four finished works: code, tests and real output. Each one can be opened and checked.</p>
     </div>
     <div class="projects">
             <article class="project">
@@ -62,6 +62,23 @@
                   <ul><li>7 endpoints: tasks, filters, stats, health-check</li><li>Proper 201/204/400/404/422 responses</li><li>Thread-safe SQLite writes</li><li>9 TestClient tests against a temporary database</li></ul>
                 </div>
                 <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">SQLite</span><span class="tag">Pydantic</span><span class="tag">Pytest</span></div>
+                <div class="project-links"><span class="mini muted">Source and tests are included in the project archive</span></div>
+              </div>
+            </article>
+            <article class="project">
+              <a class="shot" href="assets/crm-leads.png" target="_blank" rel="noopener"><img src="assets/crm-leads.png" alt="CRM Leads — website-to-CRM integration — Project screenshot" loading="lazy"></a>
+              <div class="project-body">
+                <div class="project-top">
+                  <span class="year">2026</span>
+                  <span class="tests">15 тестов</span>
+                </div>
+                <h3>CRM Leads — website-to-CRM integration</h3>
+                <p class="summary">A CLI integration: reads leads from CSV, normalizes phones and emails, merges duplicates and pushes them to a CRM via REST API idempotently. Retries on 429/5xx, a JSON report and an offline --check mode with no tokens.</p>
+                <div class="details">
+                  <h4>What is inside</h4>
+                  <ul><li>Contact cleanup: 8 (912) 345-67-89 → +79123456789</li><li>Duplicates merged by email, phone and external ID</li><li>Idempotent upsert: a rerun updates instead of copying</li><li>Retries only on 429/5xx, offline --check mode</li><li>15 tests, the key is read only from CRM_API_KEY</li></ul>
+                </div>
+                <div class="tags"><span class="tag">Python</span><span class="tag">REST API</span><span class="tag">CSV</span><span class="tag">urllib</span><span class="tag">unittest</span><span class="tag">Idempotency-Key</span></div>
                 <div class="project-links"><span class="mini muted">Source and tests are included in the project archive</span></div>
               </div>
             </article>
@@ -113,8 +130,8 @@
           <p>A focused task: process files, build a report, remove manual routine.</p>
         </div>
         <div class="service">
-          <div class="service-head"><h3>Scrapers &amp; API integration</h3><span class="price">from $60</span></div>
-          <p>Collect data from a site or connect services, export to CSV/JSON/sheets.</p>
+          <div class="service-head"><h3>Scrapers, APIs &amp; CRM</h3><span class="price">from $60</span></div>
+          <p>Data collection, service-to-service sync and CRM leads: contact cleanup, duplicate protection, reports.</p>
         </div>
         <div class="service">
           <div class="service-head"><h3>Telegram bot</h3><span class="price">from $90</span></div>
@@ -159,7 +176,7 @@
     <span class="kicker">Contact</span>
     <h2>Have a task?</h2>
     <p>Tell me what you need and what counts as done. I will reply with a quote and a timeline.</p>
-    <div class="contact-actions"><a class="btn primary" href="https://t.me/AzburaItsMe" target="_blank" rel="noopener">Message on Telegram</a><a class="btn" href="mailto:korkmasov.98@mail.ru">Email me</a></div>
+    <div class="contact-actions"><a class="btn primary" href="https://t.me/AzburaItsMe" target="_blank" rel="noopener">Message on Telegram</a><a class="btn" href="mailto:korkmasov.98@mail.ru">Email me</a><a class="btn" href="https://github.com/Azbura" target="_blank" rel="noopener">GitHub</a></div>
   </section>
 </main>
 
